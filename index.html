@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>สมุดคัดลายมือน้อย ก-ฮ A-Z และสัตว์</title>
+
+<!-- โลโก้หน้าเว็บ -->
+<link rel="icon" type="image/png"
+href="https://kpl-book.github.io/kid-book/book-kid.PNG">
+
+<!-- โลโก้เวลาแชร์ลิงก์ -->
+<meta property="og:title" content="สมุดคัดลายมือน้อย">
+<meta property="og:description" content="เว็บเรียนรู้สำหรับเด็กอนุบาล">
+<meta property="og:image"
+content="https://kpl-book.github.io/kid-book/book-kid.PNG">
+
+<meta property="og:type" content="website">
+
+<!-- iPhone / iPad -->
+<link rel="apple-touch-icon"
+href="https://kpl-book.github.io/kid-book/book-kid.PNG">
+
+<!-- สีธีม -->
+<meta name="theme-color" content="#ff91c8">
+
+<style>
+:root{--paper:#fffdf4;--bg:#fff1c7;--pink:#ff8fab;--blue:#85d7ff;--green:#a7e8bd;--yellow:#ffd166;--text:#333;--line:#b7d8ff;--shadow:0 14px 32px rgba(0,0,0,.14)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;min-height:100svh;font-family:Tahoma,"Comic Sans MS",sans-serif;color:var(--text);background:radial-gradient(circle at 8% 8%,#ffd1dc 0 15%,transparent 16%),radial-gradient(circle at 95% 12%,#caffbf 0 13%,transparent 14%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:16px}
+header{text-align:center}
+h1{margin:8px 0 0;font-size:clamp(30px,7vw,62px);color:#ff5d8f;text-shadow:3px 4px 0 #fff}
+.subtitle{font-size:clamp(17px,3.8vw,25px);font-weight:800;margin:10px auto;max-width:850px;line-height:1.45}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px auto;max-width:980px;position:sticky;top:8px;z-index:10}
+button{border:0;border-radius:22px;padding:13px 14px;font-size:clamp(17px,4vw,25px);font-weight:900;font-family:inherit;cursor:pointer;box-shadow:0 7px 0 rgba(0,0,0,.18);touch-action:manipulation}
+button:active{transform:translateY(4px);box-shadow:0 3px 0 rgba(0,0,0,.18)}
+.tab-thai{background:#ffd1dc}.tab-eng{background:#caf0f8}.tab-animal{background:#d8f3dc}.tab-print{background:#fff1a8}
+.panel{background:rgba(255,255,255,.8);border:6px solid #fff;border-radius:32px;box-shadow:var(--shadow);padding:14px}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.titleBox{flex:1;text-align:center;font-size:clamp(23px,5vw,40px);font-weight:900;color:#4361ee}
+.paper{background:var(--paper);border-radius:28px;border:4px solid white;box-shadow:inset 0 0 0 2px #f5e6a7;min-height:590px;padding:18px;position:relative;overflow:hidden}
+.paper:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0 58px,rgba(133,215,255,.55) 59px,transparent 61px),linear-gradient(to right,rgba(255,143,171,.35) 0 3px,transparent 4px);background-size:100% 92px,72px 100%;pointer-events:none;opacity:.65}
+.paperContent{position:relative;z-index:1}
+.hero{display:grid;grid-template-columns:1fr;gap:8px;align-items:center;text-align:center;margin-bottom:8px}
+.bigLetter{font-size:clamp(110px,28vw,230px);font-weight:900;color:#ff5d8f;line-height:.9;text-shadow:4px 5px 0 #ffe3ec}
+.word{font-size:clamp(31px,6.5vw,62px);font-weight:900;color:#2d6cdf;line-height:1.2}
+.picture{font-size:clamp(80px,18vw,160px);line-height:1}
+.traceArea{display:grid;gap:14px;margin-top:14px}
+.traceRow{height:86px;background:linear-gradient(to bottom,transparent 0 19px,var(--line) 20px,transparent 21px,transparent 42px,rgba(255,159,188,.7) 43px,transparent 44px,transparent 65px,var(--line) 66px,transparent 67px);border-radius:16px;display:flex;align-items:center;overflow:hidden;padding:0 10px;border:2px dashed rgba(67,97,238,.25)}
+.traceText{font-size:64px;letter-spacing:18px;font-weight:900;color:rgba(47,47,47,.18);white-space:nowrap;line-height:1;user-select:none}
+.practiceHint{margin-top:12px;background:#fff3cd;border-radius:20px;padding:12px;text-align:center;font-size:clamp(18px,4vw,25px);font-weight:900}
+.gridPicker{display:grid;grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:8px;margin-top:12px}
+.pick{min-height:58px;border-radius:18px;background:#fff;display:grid;place-items:center;font-size:clamp(22px,5vw,34px);font-weight:900;box-shadow:0 6px 14px rgba(0,0,0,.12);cursor:pointer;border:3px solid transparent}
+.pick.active{border-color:#ff5d8f;background:#ffe3ec}
+.drawLayer{position:absolute;inset:0;z-index:2;touch-action:none;border-radius:28px}
+.drawTools{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px}
+.small{font-size:clamp(16px,3.6vw,21px);padding:10px 13px;border-radius:18px}
+.prev{background:#caf0f8}.sound{background:#ffafcc}.next{background:#95d5b2}.clear{background:#ffd166}
+.parentNote{background:white;border-radius:24px;padding:16px;margin-top:14px;font-size:clamp(17px,3.7vw,23px);line-height:1.6;font-weight:700}
+@media(min-width:780px){.hero{grid-template-columns:.9fr 1.1fr .8fr;text-align:left}.bigLetter,.picture{text-align:center}.traceArea{grid-template-columns:1fr 1fr}.paper{min-height:620px;padding:24px}}
+@media(max-width:520px){.app{padding:10px}.tabs{grid-template-columns:repeat(2,1fr)}.actions{grid-template-columns:1fr 1fr}.paper{min-height:560px;padding:12px}.traceRow{height:78px}.traceText{font-size:56px;letter-spacing:11px}.gridPicker{grid-template-columns:repeat(auto-fit,minmax(52px,1fr))}}
+@media print{body{background:white;padding:0}header,.tabs,.toolbar,.drawTools,.gridPicker,.parentNote{display:none!important}.app{max-width:none;padding:0}.panel{box-shadow:none;border:0;padding:0}.paper{border:0;border-radius:0;box-shadow:none;min-height:100vh}.drawLayer{display:none}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><h1>✏️ สมุดคัดลายมือน้อย</h1><p class="subtitle">ฝึกคัด ก-ฮ, A-Z และคำศัพท์สัตว์ ใช้ได้บนมือถือ iPad หรือพิมพ์เป็นใบงานได้</p></header>
+<nav class="tabs">
+<button class="tab-thai" onclick="setMode('thai')">ก-ฮ</button>
+<button class="tab-eng" onclick="setMode('eng')">A-Z</button>
+<button class="tab-animal" onclick="setMode('animal')">สัตว์</button>
+<button class="tab-print" onclick="window.print()">🖨️ พิมพ์</button>
+</nav>
+<section class="panel">
+<div class="toolbar"><button class="prev" onclick="prevItem()">◀ ก่อนหน้า</button><div id="modeTitle" class="titleBox">ฝึกคัด ก-ฮ</div><button class="next" onclick="nextItem()">ถัดไป ▶</button></div>
+<div class="paper" id="paper"><canvas id="canvas" class="drawLayer"></canvas><div class="paperContent"><div class="hero"><div id="bigLetter" class="bigLetter">ก</div><div><div id="word" class="word">ก ไก่</div><div class="practiceHint">ดูตัวจาง แล้วใช้นิ้วลากคัดตามเส้นได้เลย</div></div><div id="picture" class="picture">🐔</div></div><div class="traceArea"><div class="traceRow"><div id="trace1" class="traceText"></div></div><div class="traceRow"><div id="trace2" class="traceText"></div></div><div class="traceRow"><div id="trace3" class="traceText"></div></div><div class="traceRow"><div id="trace4" class="traceText"></div></div></div></div></div>
+<div class="drawTools"><button class="small sound" onclick="speakCurrent()">🔊 ฟังเสียง</button><button class="small clear" onclick="clearCanvas()">🧽 ลบที่เขียน</button><button class="small" onclick="togglePen()">✍️ ปากกา: <span id="penState">เปิด</span></button></div>
+<div id="picker" class="gridPicker"></div>
+<div class="parentNote"><strong>วิธีใช้:</strong> ให้เด็กใช้นิ้วหรือ Apple Pencil คัดตามตัวอักษรจางบนเส้นบรรทัด ใช้ครั้งละ 10–15 นาที แล้วพักสายตา หรือกดพิมพ์เพื่อทำเป็นใบงานกระดาษ</div>
+</section>
+</div>
+<script>
+const thai=[["ก","ก ไก่","🐔"],["ข","ข ไข่","🥚"],["ฃ","ฃ ขวด","🍾"],["ค","ค ควาย","🐃"],["ฅ","ฅ คน","🧒"],["ฆ","ฆ ระฆัง","🔔"],["ง","ง งู","🐍"],["จ","จ จาน","🍽️"],["ฉ","ฉ ฉิ่ง","🎵"],["ช","ช ช้าง","🐘"],["ซ","ซ โซ่","⛓️"],["ฌ","ฌ เฌอ","🌳"],["ญ","ญ หญิง","👧"],["ฎ","ฎ ชฎา","👑"],["ฏ","ฏ ปฏัก","🪄"],["ฐ","ฐ ฐาน","🧱"],["ฑ","ฑ มณโฑ","👸"],["ฒ","ฒ ผู้เฒ่า","👴"],["ณ","ณ เณร","🧑"],["ด","ด เด็ก","🧒"],["ต","ต เต่า","🐢"],["ถ","ถ ถุง","🛍️"],["ท","ท ทหาร","💂"],["ธ","ธ ธง","🚩"],["น","น หนู","🐭"],["บ","บ ใบไม้","🍃"],["ป","ป ปลา","🐟"],["ผ","ผ ผึ้ง","🐝"],["ฝ","ฝ ฝา","🟤"],["พ","พ พาน","🏆"],["ฟ","ฟ ฟัน","🦷"],["ภ","ภ สำเภา","⛵"],["ม","ม ม้า","🐴"],["ย","ย ยักษ์","👹"],["ร","ร เรือ","🚤"],["ล","ล ลิง","🐵"],["ว","ว แหวน","💍"],["ศ","ศ ศาลา","🏠"],["ษ","ษ ฤๅษี","🧙"],["ส","ส เสือ","🐯"],["ห","ห หีบ","📦"],["ฬ","ฬ จุฬา","🪁"],["อ","อ อ่าง","🛁"],["ฮ","ฮ นกฮูก","🦉"]];
+const words={A:["Apple","🍎"],B:["Bear","🐻"],C:["Cat","🐱"],D:["Dog","🐶"],E:["Elephant","🐘"],F:["Fish","🐟"],G:["Giraffe","🦒"],H:["Horse","🐴"],I:["Ice cream","🍦"],J:["Juice","🧃"],K:["Kite","🪁"],L:["Lion","🦁"],M:["Monkey","🐵"],N:["Nest","🪺"],O:["Orange","🍊"],P:["Panda","🐼"],Q:["Queen","👑"],R:["Rabbit","🐰"],S:["Sun","☀️"],T:["Tiger","🐯"],U:["Umbrella","☂️"],V:["Violin","🎻"],W:["Whale","🐳"],X:["Xylophone","🎼"],Y:["Yo-yo","🪀"],Z:["Zebra","🦓"]};
+const eng="ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l=>[l,l+" "+words[l][0],words[l][1]]);
+const animal=[["🐶","สุนัข / Dog","🐶"],["🐱","แมว / Cat","🐱"],["🐘","ช้าง / Elephant","🐘"],["🐵","ลิง / Monkey","🐵"],["🐰","กระต่าย / Rabbit","🐰"],["🐯","เสือ / Tiger","🐯"],["🦁","สิงโต / Lion","🦁"],["🐻","หมี / Bear","🐻"],["🐼","แพนด้า / Panda","🐼"],["🦒","ยีราฟ / Giraffe","🦒"],["🐴","ม้า / Horse","🐴"],["🐮","วัว / Cow","🐮"],["🐷","หมู / Pig","🐷"],["🐔","ไก่ / Chicken","🐔"],["🐟","ปลา / Fish","🐟"],["🦋","ผีเสื้อ / Butterfly","🦋"],["🐝","ผึ้ง / Bee","🐝"],["🐢","เต่า / Turtle","🐢"],["🦉","นกฮูก / Owl","🦉"],["🐳","วาฬ / Whale","🐳"]];
+let mode="thai",index=0,penOn=true; const dataMap={thai,eng,animal},titles={thai:"ฝึกคัด ก-ฮ",eng:"ฝึกคัด A-Z",animal:"ฝึกคัดคำศัพท์สัตว์"};
+function currentData(){return dataMap[mode]}
+function setMode(m){mode=m;index=0;clearCanvas();render()}
+function render(){const item=currentData()[index],letter=item[0],word=item[1],pic=item[2];document.getElementById("modeTitle").textContent=titles[mode]+" หน้า "+(index+1)+"/"+currentData().length;document.getElementById("bigLetter").textContent=mode==="animal"?pic:letter;document.getElementById("word").textContent=word;document.getElementById("picture").textContent=pic;const trace=mode==="animal"?word:letter;const repeat=mode==="animal"?trace+"   "+trace:trace+" "+trace+" "+trace+" "+trace;["trace1","trace2","trace3","trace4"].forEach(id=>document.getElementById(id).textContent=repeat);renderPicker()}
+function renderPicker(){const picker=document.getElementById("picker");picker.innerHTML="";currentData().forEach((item,i)=>{const div=document.createElement("div");div.className="pick"+(i===index?" active":"");div.textContent=item[0];div.onclick=()=>{index=i;clearCanvas();render()};picker.appendChild(div)})}
+function nextItem(){index=(index+1)%currentData().length;clearCanvas();render();speakCurrent()}
+function prevItem(){index=(index-1+currentData().length)%currentData().length;clearCanvas();render();speakCurrent()}
+function speakCurrent(){if(!("speechSynthesis" in window)){alert("เบราว์เซอร์นี้ไม่รองรับเสียงอ่าน");return}const item=currentData()[index];speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(item[1]);u.lang=mode==="eng"?"en-US":"th-TH";u.rate=.8;u.pitch=1.2;speechSynthesis.speak(u)}
+const canvas=document.getElementById("canvas"),paper=document.getElementById("paper"),ctx=canvas.getContext("2d");let drawing=false,last=null;
+function resizeCanvas(){const rect=paper.getBoundingClientRect(),ratio=window.devicePixelRatio||1;canvas.width=Math.floor(rect.width*ratio);canvas.height=Math.floor(rect.height*ratio);canvas.style.width=rect.width+"px";canvas.style.height=rect.height+"px";ctx.setTransform(ratio,0,0,ratio,0,0);ctx.lineCap="round";ctx.lineJoin="round";ctx.lineWidth=8;ctx.strokeStyle="#4361ee"}
+function pos(e){const rect=canvas.getBoundingClientRect(),t=e.touches?e.touches[0]:e;return{x:t.clientX-rect.left,y:t.clientY-rect.top}}
+function startDraw(e){if(!penOn)return;drawing=true;last=pos(e);e.preventDefault()}
+function moveDraw(e){if(!drawing||!penOn)return;const p=pos(e);ctx.beginPath();ctx.moveTo(last.x,last.y);ctx.lineTo(p.x,p.y);ctx.stroke();last=p;e.preventDefault()}
+function endDraw(){drawing=false;last=null}
+function clearCanvas(){if(ctx)ctx.clearRect(0,0,canvas.width,canvas.height)}
+function togglePen(){penOn=!penOn;document.getElementById("penState").textContent=penOn?"เปิด":"ปิด"}
+canvas.addEventListener("mousedown",startDraw);canvas.addEventListener("mousemove",moveDraw);window.addEventListener("mouseup",endDraw);canvas.addEventListener("touchstart",startDraw,{passive:false});canvas.addEventListener("touchmove",moveDraw,{passive:false});canvas.addEventListener("touchend",endDraw);
+window.addEventListener("resize",resizeCanvas);resizeCanvas();render();
+</script>
+</body>
+</html>
